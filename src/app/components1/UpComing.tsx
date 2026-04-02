@@ -7,7 +7,7 @@ export const UpComing = async () => {
     await getMovieFromDB("upcoming");
 
   return (
-    <div className="w-full px-4 lg:px-20 pt-[52px] pb-[52px]">
+    <div className="w-full px-4 lg:px-20 pt-13 pb-13">
       <div className="flex justify-between pb-8">
         <p className="font-bold text-2xl">Upcoming</p>
         <Link href="/category/upcoming">
@@ -15,15 +15,15 @@ export const UpComing = async () => {
         </Link>
       </div>
 
-      <div className="grid grid-cols-2 sm:flex sm:flex-wrap sm:justify-center gap-4 sm:gap-8">
+      <div className="grid grid-cols-2 sm:flex sm:flex-wrap sm:text-wrap sm:justify-center gap-4 sm:gap-8">
         {movieResults.slice(0, 10).map((info) => (
           <Link
             key={info.id}
             href={`/movie/${info.id}`}
-            className="bg-[#F4F4F5] rounded-lg hover:scale-105 transition"
+            className="bg-[#F4F4F5] rounded-lg hover:scale-105 transition h-110"
           >
             <img
-              className="h-[340px] w-[229.73px] rounded-lg object-cover"
+              className="h-85 w-[229.73px] rounded-t-lg object-cover"
               src={`https://image.tmdb.org/t/p/w500${info.poster_path}`}
               alt={info.title}
             />
@@ -33,10 +33,8 @@ export const UpComing = async () => {
               <p className="text-[#71717A]">/10</p>
             </div>
 
-            <div className="p-2">
-              <p className="w-[213.73px] h-[95px] pt-[8px] pl-[8px]">
-                {info.title}
-              </p>
+            <div className=" text-wrap">
+              <p className="w-[213.73px] h-23.75 pt-2 pl-2">{info.title}</p>
             </div>
           </Link>
         ))}

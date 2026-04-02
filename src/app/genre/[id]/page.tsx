@@ -64,7 +64,7 @@ export default function GenrePage() {
   };
 
   return (
-    <div className="max-w-[1316px] mx-auto px-4 py-10 gap-5 min-h-screen">
+    <div className="max-w-329 mx-auto px-4 py-10 gap-5 min-h-screen">
       <h3 className="text-[30px] font-bold text-black">Search filter</h3>
 
       <div className="flex flex-col py-10 md:flex-row gap-10">
@@ -88,8 +88,8 @@ export default function GenrePage() {
                     className={`flex items-center gap-1 px-3 py-1 rounded-full border text-[12px] font-semibold transition-colors
                       ${
                         isActive
-                          ? "bg-black text-white border-black"
-                          : "bg-white text-black border-[#E4E4E7] hover:border-black"
+                          ? "bg-black text-white border-gray-300"
+                          : "bg-white text-black border-[#E4E4E7] hover:border-gray-200"
                       }`}
                   >
                     <span>{g.name}</span>
@@ -117,7 +117,7 @@ export default function GenrePage() {
             {moviesData.results.map((m: any) => (
               <Link key={m.id} href={`/movie/${m.id}`} className="group">
                 <div className="bg-[#f4f4f5] rounded-xl overflow-hidden h-full flex flex-col transition-all hover:shadow-lg">
-                  <div className="relative aspect-[2/3] w-full">
+                  <div className="relative aspect-2/3 w-full">
                     <img
                       src={
                         m.poster_path

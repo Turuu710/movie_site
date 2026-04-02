@@ -10,6 +10,7 @@ import {
   ChevronRight,
   Film,
   Search,
+  Popcorn,
 } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { SearchBar } from "../app/components1/SearchBar";
@@ -35,14 +36,14 @@ export const Header = () => {
   }, []);
 
   return (
-    <div className="flex w-full  justify-center items-center px-20 py-5 max-sm:p-4.5 bg-white">
+    <div className="flex w-full h-20 justify-evenly items-center max-sm:p-4.5 bg-white">
       <div className="flex justify-between w-7xl">
         <Link
           href="/"
           className={`flex gap-1 items-center shrink-0 cursor-pointer ${isSearchOpen ? "max-sm:hidden" : "flex"}`}
         >
-          <Film color="#4338CA" />
-          <div className="text-[#4338CA] text-base font-bold">MovieZ</div>
+          <Popcorn color="#4338CA" />
+          <div className="text-[#4338CA] text-base font-bold">MovieWEB</div>
         </Link>
         <div
           className={`flex items-center relative gap-2 ${isSearchOpen ? "max-sm:w-full" : ""}`}
@@ -52,7 +53,7 @@ export const Header = () => {
             ${isSearchOpen ? "flex" : "max-sm:hidden"} max-sm:px-2 max-sm:w-9`}
             onClick={toggle}
           >
-            {isOpen ? <ChevronDown size={16} /> : <ChevronUp size={16} />}
+            {isOpen ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
             <div className="max-sm:hidden ml-2">Genre</div>
           </Button>
           <div
