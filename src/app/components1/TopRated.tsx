@@ -7,7 +7,7 @@ export const TopRated = async () => {
     await getMovieFromDB("top_rated");
 
   return (
-    <div className="w-full px-4 lg:px-20 pt-13 pb-12.75">
+    <div className="w-full px-4 lg:px-20 pb-10">
       <div className="flex justify-between pb-6">
         <p className="font-bold text-2xl">Top Rated</p>
         <Link href="/category/top_rated">
@@ -20,10 +20,10 @@ export const TopRated = async () => {
           <Link
             key={info.id}
             href={`/movie/${info.id}`}
-            className="bg-[#F4F4F5] rounded-lg hover:scale-105 transition h-110"
+            className="bg-[#F4F4F5] rounded-lg hover:scale-105 transition h-90"
           >
             <img
-              className="h-85 w-57.43 rounded-t-lg object-cover"
+              className="h-65 md:h-85 w-57.43 rounded-t-lg object-cover"
               src={`https://image.tmdb.org/t/p/w500${info.poster_path}`}
               alt={info.title}
             />
@@ -35,7 +35,7 @@ export const TopRated = async () => {
             </div>
 
             <div className="p-2">
-              <p className="w-53.43 h-23.75 pt-2 pl-2">{info.title}</p>
+              <p className="w-full h-16 pt-1 pl-2">{info.title}</p>
             </div>
           </Link>
         ))}
