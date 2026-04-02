@@ -20,7 +20,7 @@ export const TopRated = async () => {
           <Link
             key={info.id}
             href={`/movie/${info.id}`}
-            className="bg-[#F4F4F5] rounded-lg hover:scale-105 transition h-90"
+            className="bg-[#F4F4F5] rounded-lg hover:scale-105 transition h-90 md:h-110"
           >
             <img
               className="h-65 md:h-85 w-57.43 rounded-t-lg object-cover"

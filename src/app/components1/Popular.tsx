@@ -19,7 +19,7 @@ export const Popular = async () => {
           <Link
             key={info.id}
             href={`/movie/${info.id}`}
-            className="bg-[#F4F4F5] rounded-lg hover:scale-105 transition h-90"
+            className="bg-[#F4F4F5] rounded-lg hover:scale-105 transition h-90 md:h-110"
           >
             <img
               className="md:h-85 h-65 w-57.43 rounded-t-lg object-cover"
